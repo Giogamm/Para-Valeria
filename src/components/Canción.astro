@@ -2,13 +2,11 @@
   <div
     class="bg-red-300 rounded-lg flex flex-col items-center justify-center p-6 md:p-8 border-gray-600 border-2"
   >
-    <span class="mt-4 max-w-prose text-lg text-center md:text-1xl"
-      >Desde hace un tiempo e estado escuchando esta canción y pensando
-      profundamente en ti, quisiera dedicartela mi amor, <strong
+    <span class="mt-4 max-w-prose text-lg text-center md:text-1xl">
+      Desde hace un tiempo he estado escuchando esta canción y pensando
+      profundamente en ti, quisiera dedicártela mi amor, <strong
         class="text-red-600"
-        >te amo
-      </strong></span
-    >
+      >te amo</strong></span>
 
     <div class="mt-12">
       <iframe
@@ -23,17 +21,13 @@
     <footer class="flex items-center justify-center flex-col p-2">
       <span>Te amo tanto mi amor </span>
       <span class="block">¿Quisieras quedarte conmig pa' toda la vida?</span>
-      <div
-        class="flex items-center justify-around gap-12 mt-4 [&>button]:cursor-pointer"
-      >
+      <div class="flex items-center justify-center gap-12 mt-4 [&>button]:cursor-pointer">
         <button
-          class="bg-red-600 text-white rounded-lg px-6 py-2 mt-4 transition-all hover:bg-red-700 ease-in-out duration-500"
-          id="si">Sí</button
-        >
+          class="bg-red-600 text-white rounded-lg w-full px-6 py-2 mt-4 transition-all hover:bg-red-700 ease-in-out duration-500"
+          id="si">Sí</button>
         <button
-          class="bg-red-600 text-white rounded-lg px-6 py-2 mt-4 transition-all hover:bg-red-700 ease-in-out duration-500"
-          id="no">No</button
-        >
+          class="bg-red-600 text-white rounded-lg w-full px-6 py-2 mt-4 transition-all hover:bg-red-700 ease-in-out duration-500"
+          id="no">No</button>
       </div>
       <span id="texto" class="mt-6 font-bold text-red-800"></span>
     </footer>
@@ -45,8 +39,9 @@
   const btnNo = document.getElementById("no");
   const texto = document.getElementById("texto");
   let click = 0;
+
   btnSi.addEventListener("click", () => {
-    texto.innerHTML = "Gracias por elegirme mi amor. Me fascinas";
+    texto.innerHTML = "Gracias por elegirme, mi amor. Me fascinas";
     btnNo.classList.remove("hidden");
     btnSi.classList.remove("px-12", "py-4", "px-16", "py-8", "px-24", "py-16");
     btnSi.classList.add("px-6", "py-2");
@@ -58,12 +53,13 @@
 
     if (click === 1) {
       btnSi.classList.add("px-12", "py-4"); // Primera vez
+      btnSi.classList.remove("px-6", "py-2");
     } else if (click === 2) {
       btnSi.classList.add("px-16", "py-8"); // Segunda vez, más grande
     } else if (click === 3) {
       btnSi.classList.add("px-24", "py-16"); // Tercera vez, más grande
-      btnNo.classList.add("hidden"); // Tercera vez, más grande
-      texto.innerHTML = "Tienes que elegir que si";
+      btnNo.classList.add("hidden"); // Ocultar el botón "No"
+      texto.innerHTML = "Tienes que elegir que sí";
     }
   });
 </script>
