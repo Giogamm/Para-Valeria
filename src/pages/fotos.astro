@@ -20,7 +20,7 @@ import fotos from "../client/fotos.json";
         fotos.map((foto, index) => (
           <a href={`./fotos/${foto.id}`} class="cursor-pointer">
             <img
-              src={foto.nombreFoto}
+              src={`../${foto.nombreFoto}`}
               alt=""
               class="w-full h-auto md:w-52"
               transition:name={`foto-${foto.id}`}
