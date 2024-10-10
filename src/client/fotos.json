@@ -1,0 +1,23 @@
+[
+
+    {
+        "id": 1,
+        "nombreFoto": "./valeria2.jpg",
+        "descripcion": "cada que la veo no puedo evitar admirarla y es que lo preciosa que es me hace sentirme completamente bobo por su carita bonita"
+    },
+    {
+        "id": 2,
+        "nombreFoto": "./valeria3.jpg",
+        "descripcion": "Valeria tiene unos ojos tan hermosos que me hacen sentir que estoy viendo lo mas divino que hay en el universo"
+    },
+    {
+        "id": 3,
+        "nombreFoto": "./valeria4.jpg",
+        "descripcion": "Tiene un cuerpo tan hermoso que me encanta, me gustas tanto valeria, tienes todo lo más hermoso que hay en este mundo, eres super preciosa mi vida"
+    },
+    {
+        "id": 4,
+        "nombreFoto": "./valeria5.jpg",
+        "descripcion": "Quiero toda mi vida al lado de ella, es una chica tan increible que me hace sentir en el cielo, quisiera vivir toda la eternidad con ella"
+    }
+]

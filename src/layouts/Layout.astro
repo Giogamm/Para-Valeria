@@ -2,7 +2,7 @@
 interface Props {
   title: string;
 }
-
+import ViewTransitions from 'astro/components/ViewTransitions.astro';
 ---
 
 <!doctype html>
@@ -16,6 +16,7 @@ interface Props {
     <title>para valeria</title>
   </head>
   <body class="bg-[#ffcccc]">
+    <ViewTransitions />
     <slot />
   </body>
 </html>

@@ -1,0 +1,33 @@
+<section class="flex flex-row items-center justify-center m-5 gap-5">
+  <div
+    class="cursor-pointer transition-all duration-500 ease-in-out hover:scale-110 hover:rotate-3 hover:border-2 border-pink-700 border-solid rounded-full
+    "
+  >
+    <a href="./fotos" id="link"
+      ><img
+        src="./valeria1.jpg"
+        alt="foto de valeria"
+        class="rounded-full h-1/2 md:h-56"
+      /></a
+    >
+  </div>
+
+  <div>
+    <p>
+      Clickea la foto para ver más de la <span class="text-pink-700 font-bold"
+        >chica mas hermosa del</span
+      >
+      <span class="text-blue-800 font-bold">mundo</span>
+    </p>
+  </div>
+</section>
+
+<script>
+  const link = document.getElementById("link");
+  link.addEventListener("click", function () {
+    event.preventDefault();
+    setTimeout(function () {
+      window.location.href = "./fotos";
+    }, 500);
+  });
+</script>

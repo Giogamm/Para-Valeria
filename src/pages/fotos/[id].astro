@@ -1,0 +1,45 @@
+---
+import fotos from "../../client/fotos.json"; // Importar datos del archivo JSON
+import Layout from "../../layouts/Layout2.astro"; // Cambiar el layout según lo indicado
+
+const fotosId = Number(Astro.params.id);
+const foto = fotos.find((f) => f.id === fotosId);
+if (!foto) throw new Error(`Foto con el ID ${fotosId} no encontrada`);
+
+export async function getStaticPaths() {
+  return fotos.map((foto) => ({
+    params: { id: foto.id.toString() },
+  }));
+}
+---
+
+<Layout title={`Foto de: ${foto.nombreFoto}`}>
+  <div class="flex justify-center items-center h-screen dark:bg-gray-900">
+    <main
+      class="bg-white shadow-2xl border-gray-600 p-6 h-auto w-auto flex justify-center items-center m-4 dark:bg-gray-800 dark:border-gray-700"
+    >
+      <img
+        src={`../${foto.nombreFoto}`}
+        alt=""
+        class="h-56 object-cover md:w-36 md:m-4"
+        transition:name={`foto-${foto.id}`}
+      />
+      <div class="flex flex-col justify-center items-center dark:text-gray-100">
+        <h2 class="font-bold text-2xl text-center mb-3 dark:text-green-300">
+          Foto de mi hermosa vale:
+        </h2>
+        <p class="max-w-prose dark:text-gray-100 p-3 text-center">
+          {`${foto.descripcion}`}
+        </p>
+
+        <a href="../fotos">
+          <button
+            class="py-3 px-2 bg-sky-400 rounded-lg mt-4 hover:scale-105 transition-all duration-300 ease-in-out w-32 dark:bg-sky-600"
+          >
+            Regresar
+          </button>
+        </a>
+      </div>
+    </main>
+  </div>
+</Layout>
